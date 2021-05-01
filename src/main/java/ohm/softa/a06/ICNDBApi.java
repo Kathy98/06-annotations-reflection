@@ -1,5 +1,6 @@
 package ohm.softa.a06;
 
+import ohm.softa.a06.model.ApiResponse;
 import ohm.softa.a06.model.Joke;
 import retrofit2.Call;
 import retrofit2.http.GET;
@@ -36,4 +37,16 @@ public interface ICNDBApi {
 
 	@GET("/jokes/{id}")
 	Call<Joke> getJoke(@Path("id") int number);
+
+	//Übung
+	/*@GET("/jokes/random")
+	Call<ApiResponse<Joke>> getRandomJoke();
+
+	@GET("/jokes/random")
+	Call<ApiResponse<Joke>> getRandomJoke(@Query("limitTo") String categories);*/
+
+	/*@GET("/jokes/random")
+	Call<Joke> getRandomJoke(@Query("limitTo") String categories);*/
+
+
 }
